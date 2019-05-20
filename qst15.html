@@ -28,7 +28,7 @@
         var botaoLimpar = document.getElementById("limpar");
         var resultado = document.getElementById("resultado");
         var melhorias = document.getElementById("melhorias");
-        var media;
+        var media = (parseInt(confeitaria.innerHTML) + parseInt(coberturas.innerHTML) + parseInt(bolos.innerHTML))/3;
 
         nome.contentEditable = true;
         anos.contentEditable = true;
@@ -40,6 +40,15 @@
             resultado.innerHTML = "";
             melhorias.innerHTML = "";
         })
+
+        botaoAvaliar.addEventListener("click", function avaliarClick(){
+            if(media>=70){
+                resultado.innerHTML = "Parabéns " + nome.innerHTML + "! Você está aprovado com média " + media + "!";
+            }else{
+                resultado.innerHTML = "Você está reprovado com média " + media + "!";
+            }
+        })
+        
     </script>
 </body>
 </html>
