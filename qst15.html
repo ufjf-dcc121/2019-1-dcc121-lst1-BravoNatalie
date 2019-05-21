@@ -47,8 +47,18 @@
             }else{
                 resultado.innerHTML = "Você está reprovado com média " + media + "!";
             }
+
+            if(confeitaria.innerHTML < 60){
+                melhorias.innerHTML = melhorias.innerHTML + "<br/>" + nome.innerHTML + ", considere estudar mais Confeitaria Básica!"
+            }
+            if(coberturas.innerHTML < 60){
+                melhorias.innerHTML = melhorias.innerHTML + "<br/>" + nome.innerHTML + ", considere estudar mais Coberturas!"
+            }
+            if(bolos.innerHTML < 60){
+                melhorias.innerHTML = melhorias.innerHTML + "<br/>" +  nome.innerHTML + ", considere estudar mais Broas e Bolos!"
+            }
         })
-        
+
     </script>
 </body>
 </html>
